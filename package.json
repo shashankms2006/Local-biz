@@ -1,0 +1,35 @@
+{
+  "name": "local-biz-dashboard",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently -k -n api,web -c cyan,magenta \"npm:server\" \"npm:web\"",
+    "server": "nodemon --watch server --watch .env server/index.js",
+    "web": "vite",
+    "build": "vite build",
+    "start": "node server/index.js",
+    "preview": "vite preview",
+    "test": "node --test tests/server.test.js"
+  },
+  "devDependencies": {
+    "typescript": "~6.0.2",
+    "vite": "^8.3.0"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.3.3",
+    "@vitejs/plugin-react": "^6.1.2",
+    "axios": "^1.20.0",
+    "concurrently": "^10.0.6",
+    "cors": "^2.8.6",
+    "dotenv": "^18.0.6",
+    "express": "^5.2.1",
+    "lucide-react": "^1.53.0",
+    "nodemon": "^3.1.14",
+    "react-hot-toast": "^2.6.1",
+    "react-router-dom": "^7.18.4",
+    "tailwindcss": "^4.3.3",
+    "xlsx": "^0.18.5",
+    "zustand": "^5.0.15"
+  }
+}
